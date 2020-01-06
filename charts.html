@@ -12,8 +12,10 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  <link href="jquery_ui/jquery-ui.css" rel="stylesheet">
+  <link href="js/jquery_ui/jquery-ui.css" rel="stylesheet">
+  <link href="js/jquery_ui/jquery-ui-timepicker-addon.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
 </head>
 <body id="page-top">
   <!-- Page Wrapper -->
@@ -737,7 +739,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
       <!-- modal add satff -->
-      <div class="modal" id="addstaff">
+      <div class="modal express_modal" id="addstaff">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -784,7 +786,7 @@
       </div>
       <!-- modal add satff -->
     <!-- Multiple staff modal -->
-      <div class="modal" id="multiple_staff_modal">
+      <div class="modal express_modal" id="multiple_staff_modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -827,7 +829,7 @@
       </div>
       <!-- Multiple staff modal -->
       <!-- Business modal -->
-      <div class="modal" id="myModal">
+      <div class="modal express_modal" id="myModal">
         <div class="modal-dialog">
         <div class="modal-content">
           <!-- Modal Header -->
@@ -868,7 +870,7 @@
     </div>
      <!-- Business modal -->
       <!-- add time Modal -->
-      <div class="modal" id="addtime">
+      <div class="modal express_modal" id="addtime">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -925,14 +927,14 @@
                 <label for="date">Last day off</label>
                 <input type="text" class="form-control date_picker" id="">
               </div>
-              <div class="form-group">
-                <label for="number">Start Time</label>
-                <input type="text" class="form-control" placeholder="09:00 am" id="">
-              </div>
-              <div class="form-group">
-                <label for="number">End Time</label>
-                <input type="text" class="form-control" placeholder="05:00 pm" id="">
-              </div>
+                <div class="form-group">
+				  <label for="number">Start Time</label>
+				  <input type="text" name="start_time" class="form-control start_time time_picker" placeholder="09:00 am" id="">
+				</div>
+				<div class="form-group">
+				  <label for="number">End Time</label>
+				  <input type="text" name="end_time" class="form-control end_time time_picker" placeholder="05:00 pm" id="">
+				</div>
               <small>Total Hour 8</small>
              </form>
             </div>
@@ -952,7 +954,7 @@
       </div>
       <!-- add time Modal -->
       <!--Email Schedule modal -->
-      <div class="modal" id="emailschedule">
+      <div class="modal express_modal" id="emailschedule">
           <div class="modal-dialog">
             <div class="modal-content">
               <!-- Modal Header -->
@@ -1033,7 +1035,7 @@
         </div>
     <!-- Email Schedule modal -->
     <!-- add shift modal -->
-    <div class="modal" id="addshift">
+    <div class="modal express_modal" id="addshift">
       <div class="modal-dialog">
         <div class="modal-content">
           <!-- Modal Header -->
@@ -1070,11 +1072,11 @@
             </div>
             <div class="form-group">
               <label for="number">Start Time</label>
-              <input type="text" class="form-control" placeholder="09:00 am" id="">
+              <input type="text" name="start_time" class="form-control start_time time_picker" placeholder="09:00 am" id="">
             </div>
             <div class="form-group">
               <label for="number">End Time</label>
-              <input type="text" class="form-control" placeholder="05:00 pm" id="">
+              <input type="text" name="end_time" class="form-control end_time time_picker" placeholder="05:00 pm" id="">
             </div>
             <small>Total Hour 8</small>
            </form>
@@ -1125,7 +1127,8 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="js/demo/chart-bar-demo.js"></script>
-  <script src="jquery_ui/jquery-ui.min.js"></script>
+  <script src="js/jquery_ui/jquery-ui.min.js"></script>
+  <script src="js/jquery_ui/jquery-ui-timepicker-addon.js"></script>
   <script src="js/custom_script.js"></script>
 </body>
 

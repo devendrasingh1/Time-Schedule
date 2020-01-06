@@ -32,6 +32,15 @@
 	$(".schedule_box").on("click", function(e){
 	    $(".verticle_menu").hide();
 	});
+	//============== Timepicker jquery script ===============//
+	//Timepicker
+	if($(".time_picker").length > 0){
+		$('.time_picker').timepicker({  
+		  stepHour: 1,
+		  stepMinute: 5
+		});
+	}
+	//============== Timepicker jquery script ===============//
 	//============== all checkbox checked on click ===============//
 	$('.custom_check input.all_checked').change(function(){
 		if ($(this).is(":checked")) {

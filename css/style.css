@@ -15,11 +15,42 @@ input:focus, button:focus, select:focus, textarea:focus{
 .my_common_form .form-group .form-control{
     font-size:14px;
 }
+.express_modal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.modal-footer {
+    padding: 10px 15px;
+}
 /*=== Comman css ===*/
-/*=== Datepicker css ===*/
-.ui-datepicker .ui-datepicker-header {
+/*=== Timepicker css ===*/
+.ui-timepicker-div dl dt {
+    float: left;
+    clear: left;
+    padding: 0 0 0 5px;
+    font-size: 15px;
+    font-weight: normal;
+}
+.ui-timepicker-div .ui-state-default {
+    border-radius: 50%;
     background: #159dc7;
     border-color: #159dc7;
+}
+.ui-timepicker-div .ui-state-default:focus{
+	outline:none;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    padding: 7px 13px;
+    font-size: 14px;
+    line-height: normal;
+}
+/*=== Timepicker css ===*/
+/*=== Datepicker css ===*/
+.ui-datepicker .ui-datepicker-header, 
+.ui-timepicker-div .ui-widget-header {
+    background: #159dc7;
+    border-color: #159dc7;
+    border-radius: 0;
 }
 .ui-datepicker .ui-datepicker-title {
     font-weight: normal;
@@ -412,7 +443,7 @@ button.crate_shift_btn {
 }
 .login_sec {
     width: 100%;
-    padding: 40px 0px;
+    padding: 40px 20px;
     background-image: url(../img/login1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -874,20 +905,19 @@ td.pad{
     border: 1px solid #ccc;
     padding: 5px 5px 0;
     margin-bottom: 5px;
+    position: relative;
 }
 .staffs_row .form-group{
     float: left;
     width: 25%;
     padding: 0 4px;
 }
+.staffs_row_new .remove_btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
 .form_footer {
     margin-top: 10px;
 }
 /*=== multiple staff css ====*/
-/*======Responsive css========*/
-@media (max-width: 412px){
-  button.add_time_btn{
-    margin-bottom: 12px;
-  }
-}
-/*======Responsive css========*/
