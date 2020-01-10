@@ -35,24 +35,25 @@
 	//============== Timepicker jquery script ===============//
 	//Timepicker
 	if($(".time_picker").length > 0){
-		$('.time_picker').timepicker({  
+		$('.time_picker').timepicker({
+		  timeFormat: 'h:mm: TT',
+		  ampm: true,
 		  stepHour: 1,
-		  stepMinute: 5
+		  stepMinute: 5,
 		});
 	}
 	//============== Timepicker jquery script ===============//
 	//============== all checkbox checked on click ===============//
-	$('.custom_check input.all_checked').change(function(){
+	$('.all_checked').change(function(){
 		if ($(this).is(":checked")) {
 			$(this).parents(".check_boxs").addClass("checked");
 			$(".check_boxs.checked .custom_check input").prop('checked', true);
-				//this.checked = true;       
+				     
 			}
 		else{
 			$(this).parents(".check_boxs").removeClass("checked");
 			$(".custom_check input").prop('checked', false);
 		}
-		
 	});
 	//============== append add shift field on click ===============//
 	var i = 1;
@@ -156,6 +157,24 @@
 	$(document).on('click', '.remove_btn', function(){
 		var remove_prnt = $(this).parents(".staffs_row_new");
 		$(remove_prnt).remove();
+	});
+	//Enable input on checkbox
+	$(document).on('change', '.schedule_check', function(){
+		if ($(this).is(":checked")) {
+		  $("input.schedule_date").removeAttr("disabled");
+		}
+		else{
+			$("input.schedule_date").attr("disabled",'true');
+		}
+	});
+	//Enable input on checkbox
+	$(document).on('change', '.time_range_check', function(){
+		if ($(this).is(":checked")) {
+		  $("input.time_range_inpt").removeAttr("disabled");
+		}
+		else{
+			$("input.time_range_inpt").attr("disabled",'true');
+		}
 	});
 })(jQuery);
 

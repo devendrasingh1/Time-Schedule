@@ -545,6 +545,49 @@
                               </span>
                              </td>
                            </tr>
+                 <tr class="schdule_hour_row">
+                <td>
+                  <div class="s_hour">Scheduled hours</div>
+                  <div class="emp">Employees</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+                 </tr>
+               <tr class="schdule_hour_row">
+                  <td>
+                   <a class="staff_lnk" href="#" data-toggle="modal" data-target="#addstaff">
+                   add staff</a>
+                  </td>
+                  <td colspan="7">
+                   
+                  </td>
+               </tr>
                          </tbody>
                        </table>
                      </div>
@@ -653,6 +696,25 @@
                               </span>
                              </td>
                            </tr>
+               <tr class="schdule_hour_row">
+                 <td>
+                  <div class="s_hour">Scheduled hours</div>
+                  <div class="emp">Employees</div>
+                </td>
+                <td>
+                  <div class="s_hour">0 Hrs</div>
+                  <div class="emp">0 People</div>
+                </td>
+               </tr>
+               <tr class="schdule_hour_row">
+                <td>
+                 <a class="staff_lnk" href="#" data-toggle="modal" data-target="#addstaff">
+                 add staff</a>
+                </td>
+                <td>
+                 
+                </td>
+               </tr>
                          </tbody>
                        </table>
                      </div>
@@ -927,14 +989,20 @@
                 <label for="date">Last day off</label>
                 <input type="text" class="form-control date_picker" id="">
               </div>
-                <div class="form-group">
-				  <label for="number">Start Time</label>
-				  <input type="text" name="start_time" class="form-control start_time time_picker" placeholder="09:00 am" id="">
-				</div>
-				<div class="form-group">
-				  <label for="number">End Time</label>
-				  <input type="text" name="end_time" class="form-control end_time time_picker" placeholder="05:00 pm" id="">
-				</div>
+            <div class="form-group">
+                <label class="custom_check">Time Range
+                  <input type="checkbox" value="time_range" name="timerange" class="time_range_check">
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+          <div class="form-group">
+          <label for="number">Start Time</label>
+          <input type="text" name="start_time" class="form-control start_time time_picker time_range_inpt" placeholder="09:00 am" disabled="">
+        </div>
+        <div class="form-group">
+          <label for="number">End Time</label>
+          <input type="text" name="end_time" class="form-control end_time time_picker time_range_inpt" placeholder="05:00 pm" disabled="">
+        </div>
               <small>Total Hour 8</small>
              </form>
             </div>
@@ -996,17 +1064,17 @@
                 </div>
                 <div class="form-group">
                    <label class="custom_check">include the schedule
-                    <input type="checkbox" value="" name="">
+                    <input type="checkbox" value="" name="" class="schedule_check">
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="form-group">
                   <label for="date">From</label>
-                  <input type="text" class="form-control date_picker" id="">
+                  <input type="text" class="form-control date_picker schedule_date" id="" disabled="">
                 </div>
                 <div class="form-group">
                   <label for="date">To</label>
-                  <input type="text" class="form-control date_picker" id="">
+                  <input type="text" class="form-control date_picker schedule_date" id="" disabled="">
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Send option</label>
@@ -1131,5 +1199,4 @@
   <script src="js/jquery_ui/jquery-ui-timepicker-addon.js"></script>
   <script src="js/custom_script.js"></script>
 </body>
-
 </html>

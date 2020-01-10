@@ -177,7 +177,7 @@ span.info_menu_icon {
 }
 .custom_modal {
     padding: 12px;
-    background-color: #07617D;
+    background-color: #159dc7;
 }
 .custom_modal h4 {
     font-size: 16px;
@@ -263,14 +263,15 @@ label.saving_schedule {
 }
 button.add_time_btn {
     border-radius: 4px;
-    background-color: #d4d4d4;
-    border: 1px solid #d4d4d4;
+    background-color: #ffffff;
+    border: 1px solid #159dc7;
     padding: 4px 10px;
+    color: #159dc7;
 }
 button.crate_shift_btn {
     border-radius: 4px;
-    background-color: #07617d;
-    border: 1px solid #07617d;
+    background-color: #159dc7;
+    border: 1px solid #159dc7;
     padding: 4px 10px;
     color: #fff;
 }
@@ -398,7 +399,7 @@ button.crate_shift_btn {
   background-color: #ccc;
 }
 .custom_check input:checked ~ .checkmark {
-  background-color: #07617d;
+    background-color: #159dc7;
 }
 .checkmark:after {
   content: "";
@@ -523,7 +524,7 @@ span.print_btn a {
     padding: 5px 22px;
     border-radius: 4px;
     text-decoration: none;
-    background-color: #07617d;
+    background-color: #159dc7;
 }
 .user_content {
    
@@ -548,7 +549,7 @@ td.pad.backcolor {
     padding: 18px 6px;
 }
 .Vacation {
-    background-color: #07617d;
+    background-color: #159dc7;
 }
 .Vacation p {
     font-size: 14px;
@@ -870,6 +871,23 @@ td.pad{
 }
 .schedule_box:hover .add_icon {
  display: block;
+}
+
+.schdule_hour_row .s_hour {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #666;
+}
+.schdule_hour_row .emp {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #000;
+}
+.schdule_hour_row .staff_lnk {
+    text-transform: capitalize;
+    font-size: 14px;
+    text-decoration: none;
+    color: #159dc7;
 }
 /*=== Schedule table css ====*/
 
