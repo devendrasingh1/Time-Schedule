@@ -55,6 +55,16 @@
 			$(".custom_check input").prop('checked', false);
 		}
 	});
+	//============== email copy on checked  ===============//
+	$('.email_copy_check').change(function(){
+		if ($(this).is(":checked")) {
+			$(".email_copy_input").show();
+				     
+			}
+		else{
+			$(".email_copy_input").hide();
+		}
+	});
 	//============== append add shift field on click ===============//
 	var i = 1;
 	$('.add_shift_btn').on('click', function(){
@@ -176,5 +186,10 @@
 			$("input.time_range_inpt").attr("disabled",'true');
 		}
 	});
+	//custom hide bootstrape modal
+    // Hide modal on button click
+    $(".modal_hide").click(function(){
+        $("#emailschedule").modal('hide');
+    });
 })(jQuery);
 

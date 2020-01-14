@@ -319,13 +319,13 @@
                         <a href="#" class="text_link" data-toggle="modal" data-target="#emailschedule">Email</a>
                       </div>
                       <div class="download_text ctrl_item">
-                        <a href="#" class="text_link">Download Schedule</a>
+                        <a href="#" data-toggle="modal" data-target="#download_schedule_modal" class="text_link">Download Schedule</a>
                       </div>
                       <div class="print_text ctrl_item">
                         <span class="print_button text_link">Print</span>
                       </div>
                       <div class="email_text ctrl_item">
-                        <span class="text_link">clear week</span>
+                        <a href="#" data-toggle="modal" data-target="#clear_schedule_modal" class="text_link">clear week</a>
                       </div>
                       <ul class="schedules_tabs">
                         <li class="tab_link active_lnk" data-tab="week_tab">week</li>
@@ -336,7 +336,7 @@
                   </div>
                   <!-- controler bar end-->
                   <!-- table start -->
-                  <div class="time_off_tbl schedule_tables week_schedule_tbl">
+                  <div class="schedule_tables week_schedule_tbl">
                     <div class="table-responsive">
                        <table class="table table-bordered dataTable">
                          <thead>
@@ -617,13 +617,13 @@
                         <a href="#" class="text_link" data-toggle="modal" data-target="#emailschedule">Email</a>
                       </div>
                       <div class="download_text ctrl_item">
-                        <a href="#" class="text_link">Download Schedule</a>
+                        <a href="#" data-toggle="modal" data-target="#download_schedule_modal" class="text_link">Download Schedule</a>
                       </div>
                       <div class="print_text ctrl_item">
                         <span class="print_button text_link">Print</span>
                       </div>
                       <div class="email_text ctrl_item">
-                        <span class="text_link">clear Day</span>
+                        <a href="#" data-toggle="modal" data-target="#clear_schedule_modal" class="text_link">clear Day</a>
                       </div>
                       <ul class="schedules_tabs">
                         <li class="tab_link" data-tab="week_tab">week</li>
@@ -634,7 +634,7 @@
                   </div>
                   <!-- controler bar end-->
                   <!-- table start -->
-                  <div class="time_off_tbl schedule_tables day_schedule_tbl">
+                  <div class="schedule_tables day_schedule_tbl">
                      <div class="table-responsive">
                        <table class="table table-bordered dataTable">
                          <thead>
@@ -759,15 +759,28 @@
                            <th>Time To</th>
                            <th>Time Off</th>
                            <th>Type</th>
+                           <th>Actions</th>
                          </tr>
                        </thead>
                        <tbody>
                          <tr>
-                           <td colspan="11" style="padding: 12px;">
-                             <h2>Add your first time off entry</h2>
-                              <div class="tbl_btn">
-                                <button class="crate_shift_btn" data-toggle="modal" data-target="#addtime">Add Time Off</button>
-                              </div>
+                           <td>5-01-2020</td>
+                           <td><a href="#" data-toggle="modal" data-target="#staff_edit_modal">Neha</a></td>
+                           <td><a href="#" data-toggle="modal" data-target="#staff_edit_modal">Sharma</a></td>
+                           <td><a href="#" data-toggle="modal" data-target="#staff_edit_modal">nehasharma@gmail.com</a></td>
+                           <td>5-01-2020</td>
+                           <td>6-01-2020</td>
+                           <td>9:00 AM</td>
+                           <td>5:00 PM</td>
+                           <td>8 Hours</td>
+                           <td>Maternity</td>
+                           <td class="action_td">
+                             <a href="#" class="icons">
+                               <i class="fas fa-edit"></i>
+                             </a>
+                             <a href="#" class="icons" data-toggle="modal" data-target="#delete_timeoff_modals">
+                               <i class="fas fa-trash-alt"></i>
+                             </a>
                            </td>
                          </tr>
                        </tbody>
@@ -800,7 +813,7 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-      <!-- modal add satff -->
+      <!-- add satff modal -->
       <div class="modal express_modal" id="addstaff">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -847,6 +860,52 @@
         </div>
       </div>
       <!-- modal add satff -->
+      <!-- Edit satff modal Start -->
+      <div class="modal staff_edit_modal" id="staff_edit_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header custom_modal">
+              <h4 class="modal-title">Edit Staff Member</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body create_frm">
+             <form class="my_common_form">
+              <div class="form-group">
+                  <label for="name">First Name</label>
+                  <input type="text" class="form-control" placeholder="John" id="">
+              </div>
+              <div class="form-group">
+                  <label for="name">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Smith" id="">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" placeholder="example123@gmail.com" id="">
+              </div>
+              <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="text" class="form-control" placeholder="+91-98765-43210" id="">
+              </div>
+             </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <a href="#" class="site_button delete_staff">Delete Staff</a>
+              <a href="#" class="btn btn-secondary btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+                <span class="text">Save Profile</span>
+              </a>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- Edit satff modal End -->
     <!-- Multiple staff modal -->
       <div class="modal express_modal" id="multiple_staff_modal">
         <div class="modal-dialog">
@@ -1085,16 +1144,19 @@
                 </div>
                 <div class="form-group">
                   <label class="custom_check">Email me a copy
-                    <input type="checkbox" value="" name="">
+                    <input type="checkbox" value="" name="" class="email_copy_check">
                     <span class="checkmark"></span>
                   </label>
                 </div>
+                <div class="form-group email_copy_input">
+                  <label>Email Copy</label>
+                    <input type="text" class="form-control" name="" placeholder="Your Email Address">
+                </div>
                </form>
               </div>
-
               <!-- Modal footer -->
               <div class="modal-footer">
-                <a href="#" class="preview_btn">Preview</a>
+                <a href="#" class="preview_btn modal_hide" data-toggle="modal" data-target="#email_preview_modal">Preview</a>
                 <a href="#" class="preview_btn">Send</a>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
               </div>
@@ -1182,6 +1244,179 @@
       </div>
     </div>
   </div>
+  <!-- logout modal -->
+  <!--Download Schedule modal -->
+    <div class="modal" id="download_schedule_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header custom_modal">
+              <h4 class="modal-title">Download Schedule</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body adshi_modal">
+             <form class="my_common_form">
+              <div class="form-group">
+                <p>Staff Member</p>
+                <!-- check boxs -->
+                <div class="check_boxs">
+                 <label class="custom_check">All staff
+                  <input type="checkbox" value="" name="" checked="checked" class="all_checked">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="custom_check">Neha Sharma
+                  <input type="checkbox" value="Neha Sharma" name="staff_check" class="check_inputs" checked="">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="custom_check">Anusha Gour
+                  <input type="checkbox" value="Anusha Gour" name="staff_check" class="check_inputs">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <!-- check boxs -->
+              </div>
+              <div class="form-group">
+                <label for="date">From</label>
+                <input type="text" class="form-control date_picker schedule_date" id="">
+              </div>
+              <div class="form-group">
+                <label for="date">To</label>
+                <input type="text" class="form-control date_picker schedule_date" id="">
+              </div>
+             </form>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="site_button">Download</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- Download Schedule modal -->
+    <!-- clear week modal -->
+    <div class="modal" id="clear_schedule_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header custom_modal">
+              <h4 class="modal-title">Clear Schedule</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body clear_schedule_form">
+             <form class="my_common_form">
+                <p>Are you sure you want to?</p>
+                <div class="button_groups">
+                  <button type="button" class="site_button">Clear</button>
+                  <button type="button" class="site_button" data-dismiss="modal">cancel</button>
+                </div>
+             </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- clear week modal -->
+    <!-- Delete timeoff modal Start -->
+    <div class="modal" id="delete_timeoff_modals">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header custom_modal">
+              <h4 class="modal-title">Delete Time Off Entry</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body clear_schedule_form">
+             <form class="my_common_form">
+                <p>Are you sure you want to?</p>
+                <div class="button_groups">
+                  <button type="button" class="site_button">Delete</button>
+                  <button type="button" class="site_button" data-dismiss="modal">cancel</button>
+                </div>
+             </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Delete timeoff modal End -->
+    <!-- Emali Preview modal -->
+    <div class="modal" id="email_preview_modal">
+        <div class="modal-dialog">
+      <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header custom_modal">
+        <h4 class="modal-title">Email Preview</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form class="my_common_form">
+            <div class="form-group">
+              <label>Staff Member</label>
+              <select class="form-control">
+              <option>Neha sharma</option>
+              <option>Anusha Gaur</option>
+              <option>Rohit Sharma</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Email:</label>
+              <div class="email_preview_box">
+              <div class="body_message">
+                <p>Hello,</br>
+                Please find your schedule below.</p>
+              </div>
+              <div class="emali_prev_table table-responsive">
+                <table class="table">
+                <tr>
+                  <th>Employee Name </th>
+                  <th>Wed, 1 Jan</th>
+                  <th>Thurs, 2 Jan</th>
+                  <th>Fri, 3 Jan</th>
+                  <th>Sat, 4 Jan</th>
+                  <th>Sun, 5 Jan</th>
+                  <th>Mon, 6 Jan</th>
+                  <th>Tues, 7 Jan</th>
+                </tr>
+                <tr>
+                  <td><span class="prev_emp_name">Neha Sharma</span></td>
+                  <td></td>
+                  <td>
+                    <div class="peview_text">
+                    <div class="text_inner">9:00am - 5:00pm</div>
+                  </div>
+                  <div class="peview_text">
+                    <div class="text_inner">15 Minute break</div>
+                  </div>
+                    <div class="peview_text">
+                    <span>Vacation</span>
+                    <div class="text_inner">9:00am - 5:00pm</div>
+                  </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </table>
+              </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal body -->
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="site_button" data-toggle="modal" data-target="#emailschedule" data-dismiss="modal">Close Preview</button>
+        </div>
+        <!-- Modal footer -->
+      </div>
+        </div>
+    </div>
+    <!-- Email Preview modal -->
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
